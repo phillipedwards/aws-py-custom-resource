@@ -1,0 +1,334 @@
+W0830 13:17:53.288284   71283 log.go:98] A new version of Pulumi is available. To upgrade from version '3.73.0' to '3.79.0', run 
+   $ brew update && brew upgrade pulumi
+or visit https://pulumi.com/docs/install/ for manual instructions and release notes.
+I0830 13:17:53.843331   71283 log.go:80] Explicitly ignoring and discarding error: no git repository found from /Users/pedwards/repos/customer/fauna/aws-py-custom-resource
+I0830 13:17:53.996706   71283 log.go:80] Stack phil being updated to version 27
+I0830 13:17:54.547451   71283 log.go:80] *** Starting Update(preview=false) ***
+I0830 13:17:54.547836   71283 log.go:80] gatherPluginsFromProgram(): gathering plugins from language host
+I0830 13:17:54.548090   71283 log.go:80] GetPluginPath(language, python, <nil>): found on $PATH /usr/local/bin/pulumi-language-python
+I0830 13:17:54.575152   71283 log.go:80] langhost[python].GetPluginInfo() executing
+I0830 13:17:54.575819   71283 log.go:80] langhost[python].GetRequiredPlugins(proj=aws-py-custom-resource,pwd=/Users/pedwards/repos/customer/fauna/aws-py-custom-resource,program=.) executing
+I0830 13:17:55.211274   71283 log.go:80] langhost[python].GetRequiredPlugins(proj=aws-py-custom-resource,pwd=/Users/pedwards/repos/customer/fauna/aws-py-custom-resource,program=.) success: #versions=1
+I0830 13:17:55.211349   71283 log.go:80] gatherPluginsFromProgram(): plugin python <nil> () is required by language host
+I0830 13:17:55.211371   71283 log.go:80] gatherPluginsFromProgram(): plugin aws 5.42.0 () is required by language host
+I0830 13:17:55.211390   71283 log.go:80] gatherPluginsFromSnapshot(): gathering plugins from snapshot
+I0830 13:17:55.211427   71283 log.go:80] gatherPluginsFromSnapshot(): plugin aws 5.42.0 is required by first-class provider "urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0"
+I0830 13:17:55.211474   71283 log.go:80] ensurePluginsAreInstalled(): beginning
+I0830 13:17:55.211572   71283 log.go:80] GetPluginPath(language, python, <nil>): found on $PATH /usr/local/bin/pulumi-language-python
+I0830 13:17:55.211596   71283 log.go:80] ensurePluginsAreInstalled(): plugin python <nil> already installed
+I0830 13:17:55.212293   71283 log.go:80] GetPluginPath(resource, aws, 5.42.0): enabling new plugin behavior
+I0830 13:17:55.212326   71283 log.go:80] SelectCompatiblePlugin(..., aws): beginning
+I0830 13:17:55.212359   71283 log.go:80] SelectCompatiblePlugin(..., aws): skipping plugin aws-5.31.0: semver mismatch
+I0830 13:17:55.212374   71283 log.go:80] SelectCompatiblePlugin(..., aws): skipping plugin aws-5.35.0: semver mismatch
+I0830 13:17:55.212387   71283 log.go:80] SelectCompatiblePlugin(..., aws): skipping plugin aws-5.41.0: semver mismatch
+I0830 13:17:55.212406   71283 log.go:80] SelectCompatiblePlugin(..., aws): best plugin aws-5.42.0: semver match
+I0830 13:17:55.212420   71283 log.go:80] SelectCompatiblePlugin(..., aws): selecting plugin 'aws-5.42.0': best match 
+I0830 13:17:55.212452   71283 log.go:80] GetPluginPath(resource, aws, 5.42.0): found in cache at /Users/pedwards/.pulumi/plugins/resource-aws-v5.42.0/pulumi-resource-aws
+I0830 13:17:55.212470   71283 log.go:80] ensurePluginsAreInstalled(): plugin aws 5.42.0 already installed
+I0830 13:17:55.212486   71283 log.go:80] ensurePluginsAreInstalled(): completed
+I0830 13:17:55.212511   71283 log.go:80] computeDefaultProviderPlugins(): considering python
+I0830 13:17:55.212527   71283 log.go:80] computeDefaultProviderPlugins(): considering aws-5.42.0
+I0830 13:17:55.212541   71283 log.go:80] computeDefaultProviderPlugins(): plugin aws-5.42.0 selected for package aws (first seen)
+I0830 13:17:55.212554   71283 log.go:72] computeDefaultProviderPlugins(): summary of default plugins:
+I0830 13:17:55.212572   71283 log.go:80]   aws             = 5.42.0
+I0830 13:17:55.212649   71283 log.go:80] GetPluginPath(language, python, <nil>): found on $PATH /usr/local/bin/pulumi-language-python
+I0830 13:17:55.237553   71283 log.go:80] langhost[python].GetPluginInfo() executing
+I0830 13:17:55.238301   71283 log.go:80] deploymentExecutor.Execute(...): waiting for incoming events
+I0830 13:17:55.238344   71283 log.go:80] StepExecutor worker(-2): worker coming online
+I0830 13:17:55.238373   71283 log.go:80] StepExecutor worker(-2): worker waiting for incoming chains
+I0830 13:17:55.238348   71283 log.go:80] langhost[python].Run(pwd=/Users/pedwards/repos/customer/fauna/aws-py-custom-resource,program=.,#args=0,proj=aws-py-custom-resource,stack=phil,#config=2,dryrun=false) executing
+I0830 13:17:55.502569   71283 log.go:80] registering resource: ty=pulumi:pulumi:Stack, name=aws-py-custom-resource-phil, custom=False, remote=False
+I0830 13:17:55.741774   71283 log.go:80] registering resource: ty=aws:sns/topic:Topic, name=test-topic, custom=True, remote=False
+I0830 13:17:55.743598   71283 log.go:80] registering resource: ty=aws:iam/role:Role, name=lambda-role, custom=True, remote=False
+I0830 13:17:55.744918   71283 log.go:80] registering resource: ty=aws:iam/rolePolicyAttachment:RolePolicyAttachment, name=lambda-rpa, custom=True, remote=False
+I0830 13:17:55.777973   71283 log.go:80] registering resource: ty=aws:lambda/function:Function, name=test-func, custom=True, remote=False
+I0830 13:17:55.868549   71283 log.go:80] registering resource: ty=aws:s3/bucket:Bucket, name=test-bucket, custom=True, remote=False
+I0830 13:17:55.870812   71283 log.go:80] registering resource: ty=aws:iam/policy:Policy, name=bucket-policy, custom=True, remote=False
+I0830 13:17:55.871929   71283 log.go:80] registering resource: ty=aws:iam/rolePolicyAttachment:RolePolicyAttachment, name=lambda-bucket-rpa, custom=True, remote=False
+I0830 13:17:55.872813   71283 log.go:80] registering resource: ty=aws:lambda/permission:Permission, name=lambda-perm, custom=True, remote=False
+I0830 13:17:55.874158   71283 log.go:80] registering resource: ty=aws:sns/topicSubscription:TopicSubscription, name=topic-sub, custom=True, remote=False
+I0830 13:17:55.875437   71283 log.go:80] registering resource: ty=pkg:index:customResource, name=test, custom=False, remote=False
+I0830 13:17:55.876014   71283 log.go:80] Waiting for outstanding RPCs to complete
+I0830 13:17:55.876400   71283 log.go:80] RPCs successfully completed
+I0830 13:17:55.876939   71283 log.go:80] Waiting for 207 outstanding tasks to complete
+I0830 13:17:55.877577   71283 log.go:80] beginning rpc register resource
+I0830 13:17:55.878047   71283 log.go:80] beginning rpc register resource
+I0830 13:17:55.878422   71283 log.go:80] beginning rpc register resource
+I0830 13:17:55.878747   71283 log.go:80] beginning rpc register resource
+I0830 13:17:55.879138   71283 log.go:80] beginning rpc register resource
+I0830 13:17:55.879535   71283 log.go:80] beginning rpc register resource
+I0830 13:17:55.880177   71283 log.go:80] beginning rpc register resource
+I0830 13:17:55.880517   71283 log.go:80] beginning rpc register resource
+I0830 13:17:55.880884   71283 log.go:80] beginning rpc register resource
+I0830 13:17:55.881207   71283 log.go:80] beginning rpc register resource
+I0830 13:17:55.881516   71283 log.go:80] beginning rpc register resource outputs
+I0830 13:17:55.884075   71283 log.go:80] ResourceMonitor.SupportsFeature(id: aliasSpecs) = true
+I0830 13:17:55.893980   71283 log.go:80] resource registration prepared: ty=pulumi:pulumi:Stack, name=aws-py-custom-resource-phil
+I0830 13:17:55.896404   71283 log.go:80] ResourceMonitor.RegisterResource received: t=pulumi:pulumi:Stack, name=aws-py-custom-resource-phil, custom=false, #props=0, parent=, protect=false, provider=, deps=[], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts=<nil>, providers=map[], replaceOnChanges=[], retainOnDelete=false, deletedWith=
+I0830 13:17:55.896447   71283 log.go:80] EvalSourceIterator produced a registration: t=pulumi:pulumi:Stack,name=aws-py-custom-resource-phil,#props=0
+I0830 13:17:55.896468   71283 log.go:80] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0830 13:17:55.896487   71283 log.go:80] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0830 13:17:55.896539   71283 log.go:80] Planner decided not to update 'urn:pulumi:phil::aws-py-custom-resource::pulumi:pulumi:Stack::aws-py-custom-resource-phil' after diff (same) (inputs=map[])
+I0830 13:17:55.896581   71283 log.go:80] Checking step same for urn:pulumi:phil::aws-py-custom-resource::pulumi:pulumi:Stack::aws-py-custom-resource-phil
+I0830 13:17:55.896603   71283 log.go:80] StepExecutor worker(-2): worker received chain for execution
+I0830 13:17:55.896618   71283 log.go:80] StepExecutor worker(-2): worker waiting for incoming chains
+I0830 13:17:55.896635   71283 log.go:80] StepExecutor worker(0): launching oneshot worker
+I0830 13:17:55.896719   71283 log.go:80] StepExecutor worker(0): applying step same on urn:pulumi:phil::aws-py-custom-resource::pulumi:pulumi:Stack::aws-py-custom-resource-phil (preview false)
+I0830 13:17:55.896824   71283 log.go:80] StepExecutor worker(0): step same on urn:pulumi:phil::aws-py-custom-resource::pulumi:pulumi:Stack::aws-py-custom-resource-phil retired
+I0830 13:17:55.896848   71283 log.go:80] ResourceMonitor.RegisterResource operation finished: t=pulumi:pulumi:Stack, urn=urn:pulumi:phil::aws-py-custom-resource::pulumi:pulumi:Stack::aws-py-custom-resource-phil, #outs=0
+I0830 13:17:55.897564   71283 log.go:80] resource registration successful: ty=pulumi:pulumi:Stack, urn=urn:pulumi:phil::aws-py-custom-resource::pulumi:pulumi:Stack::aws-py-custom-resource-phil
+I0830 13:17:55.898251   71283 log.go:80] register resource outputs prepared: urn=urn:pulumi:phil::aws-py-custom-resource::pulumi:pulumi:Stack::aws-py-custom-resource-phil, props=
+I0830 13:17:55.898719   71283 log.go:80] resource registration prepared: ty=aws:sns/topic:Topic, name=test-topic
+I0830 13:17:55.898845   71283 log.go:80] ResourceMonitor.RegisterResourceOutputs received: urn=urn:pulumi:phil::aws-py-custom-resource::pulumi:pulumi:Stack::aws-py-custom-resource-phil, #outs=0
+I0830 13:17:55.898882   71283 log.go:80] EvalSourceIterator produced a completion: urn=urn:pulumi:phil::aws-py-custom-resource::pulumi:pulumi:Stack::aws-py-custom-resource-phil,#outs=0
+I0830 13:17:55.898898   71283 log.go:80] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0830 13:17:55.898910   71283 log.go:80] deploymentExecutor.handleSingleEvent(...): received register resource outputs
+I0830 13:17:55.898924   71283 log.go:80] StepExecutor worker(-1): registered resource outputs urn:pulumi:phil::aws-py-custom-resource::pulumi:pulumi:Stack::aws-py-custom-resource-phil: old=#1, new=#0
+I0830 13:17:55.899312   71283 log.go:80] resource registration prepared: ty=aws:iam/role:Role, name=lambda-role
+I0830 13:17:55.899907   71283 log.go:80] resource registration prepared: ty=aws:s3/bucket:Bucket, name=test-bucket
+I0830 13:17:55.902214   71283 log.go:80] handling default provider request for package aws-5.42.0
+I0830 13:17:55.902277   71283 log.go:80] newRegisterDefaultProviderEvent(aws-5.42.0): using version 5.42.0 from request
+I0830 13:17:55.902296   71283 log.go:80] newRegisterDefaultProviderEvent(aws-5.42.0): no pluginDownloadURL specified, falling back to default pluginDownloadURL
+I0830 13:17:55.902308   71283 log.go:80] newRegisterDefaultProviderEvent(aws-5.42.0): default pluginDownloadURL miss, sending empty string to engine
+I0830 13:17:55.902360   71283 log.go:80] waiting for default provider for package aws-5.42.0
+I0830 13:17:55.902377   71283 log.go:80] EvalSourceIterator produced a registration: t=pulumi:providers:aws,name=default_5_42_0,#props=3
+I0830 13:17:56.090973   71283 log.go:80] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0830 13:17:56.091000   71283 log.go:80] ResourceMonitor.RegisterResourceOutputs operation finished: urn=urn:pulumi:phil::aws-py-custom-resource::pulumi:pulumi:Stack::aws-py-custom-resource-phil, #outs=0
+I0830 13:17:56.091029   71283 log.go:80] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0830 13:17:56.091185   71283 log.go:80] ProviderRegistry.Check(urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0) executing (#olds=3,#news=3)
+I0830 13:17:56.092001   71283 log.go:80] resource registration successful: urn=urn:pulumi:phil::aws-py-custom-resource::pulumi:pulumi:Stack::aws-py-custom-resource-phil, props=
+I0830 13:17:56.092200   71283 log.go:80] GetPluginPath(resource, aws, 5.42.0): enabling new plugin behavior
+I0830 13:17:56.092233   71283 log.go:80] SelectCompatiblePlugin(..., aws): beginning
+I0830 13:17:56.092262   71283 log.go:80] SelectCompatiblePlugin(..., aws): skipping plugin aws-5.31.0: semver mismatch
+I0830 13:17:56.092276   71283 log.go:80] SelectCompatiblePlugin(..., aws): skipping plugin aws-5.35.0: semver mismatch
+I0830 13:17:56.092289   71283 log.go:80] SelectCompatiblePlugin(..., aws): skipping plugin aws-5.41.0: semver mismatch
+I0830 13:17:56.092301   71283 log.go:80] SelectCompatiblePlugin(..., aws): best plugin aws-5.42.0: semver match
+I0830 13:17:56.092313   71283 log.go:80] SelectCompatiblePlugin(..., aws): selecting plugin 'aws-5.42.0': best match 
+I0830 13:17:56.092363   71283 log.go:80] GetPluginPath(resource, aws, 5.42.0): found in cache at /Users/pedwards/.pulumi/plugins/resource-aws-v5.42.0/pulumi-resource-aws
+I0830 13:17:56.262609   71283 log.go:80] Provider[aws, 0xc000e80730].GetPluginInfo() executing
+I0830 13:17:56.263131   71283 log.go:80] Provider[aws, 0xc000e80730].GetPluginInfo() success (#version=5.42.0) success
+I0830 13:17:56.263205   71283 log.go:80] Provider[aws, 0xc000e80730].CheckConfig(urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0) executing (#olds=3,#news=3)
+I0830 13:17:57.136107   71283 log.go:80] Provider[aws, 0xc000e80730].CheckConfig(urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0) success: inputs=#3 failures=#0
+I0830 13:17:57.136162   71283 log.go:80] setProvider(urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::04da6b54-80e4-46f7-96ec-b56ff0331ba9)
+I0830 13:17:57.136204   71283 log.go:80] ProviderRegistry.Diff(urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0,d93f39f6-dd39-4714-82fa-09b5a7827f86): executing (#olds=3,#news=3)
+I0830 13:17:57.136218   71283 log.go:80] GetProvider(urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::04da6b54-80e4-46f7-96ec-b56ff0331ba9)
+I0830 13:17:57.136232   71283 log.go:80] Provider[aws, 0xc000e80730].DiffConfig(urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0) executing (#olds=3,#news=3)
+I0830 13:17:57.136701   71283 log.go:80] Provider[aws, 0xc000e80730].DiffConfig(urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0) unimplemented rpc: returning DiffUnknown with no replaces
+I0830 13:17:57.136737   71283 log.go:80] ProviderRegistry.Diff(urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0,d93f39f6-dd39-4714-82fa-09b5a7827f86): executed (1, []resource.PropertyKey(nil))
+I0830 13:17:57.136781   71283 log.go:80] Planner decided not to update 'urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0' after diff (same) (inputs=map[profile:{pulumi-ce} region:{us-west-2} version:{5.42.0}])
+I0830 13:17:57.136801   71283 log.go:80] Checking step same for urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0
+I0830 13:17:57.136822   71283 log.go:80] StepExecutor worker(-2): worker received chain for execution
+I0830 13:17:57.136840   71283 log.go:80] StepExecutor worker(-2): worker waiting for incoming chains
+I0830 13:17:57.136852   71283 log.go:80] StepExecutor worker(1): launching oneshot worker
+I0830 13:17:57.136910   71283 log.go:80] StepExecutor worker(1): applying step same on urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0 (preview false)
+I0830 13:17:57.136928   71283 log.go:80] Same(urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86)
+I0830 13:17:57.136958   71283 log.go:80] GetProvider(urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86)
+I0830 13:17:57.137644   71283 log.go:80] GetPluginPath(resource, aws, 5.42.0): enabling new plugin behavior
+I0830 13:17:57.137687   71283 log.go:80] SelectCompatiblePlugin(..., aws): beginning
+I0830 13:17:57.137709   71283 log.go:80] SelectCompatiblePlugin(..., aws): skipping plugin aws-5.31.0: semver mismatch
+I0830 13:17:57.137720   71283 log.go:80] SelectCompatiblePlugin(..., aws): skipping plugin aws-5.35.0: semver mismatch
+I0830 13:17:57.137735   71283 log.go:80] SelectCompatiblePlugin(..., aws): skipping plugin aws-5.41.0: semver mismatch
+I0830 13:17:57.137748   71283 log.go:80] SelectCompatiblePlugin(..., aws): best plugin aws-5.42.0: semver match
+I0830 13:17:57.137758   71283 log.go:80] SelectCompatiblePlugin(..., aws): selecting plugin 'aws-5.42.0': best match 
+I0830 13:17:57.137787   71283 log.go:80] GetPluginPath(resource, aws, 5.42.0): found in cache at /Users/pedwards/.pulumi/plugins/resource-aws-v5.42.0/pulumi-resource-aws
+I0830 13:17:57.295885   71283 log.go:80] Provider[aws, 0xc0011ef5e0].GetPluginInfo() executing
+I0830 13:17:57.296358   71283 log.go:80] Provider[aws, 0xc0011ef5e0].GetPluginInfo() success (#version=5.42.0) success
+I0830 13:17:57.296429   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Configure() executing (#vars=3)
+I0830 13:17:57.296477   71283 log.go:80] loaded provider urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86
+I0830 13:17:57.296492   71283 log.go:80] setProvider(urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86)
+I0830 13:17:57.296552   71283 log.go:80] StepExecutor worker(1): step same on urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0 retired
+I0830 13:17:57.296589   71283 log.go:80] registered default provider for package aws-5.42.0: urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0
+I0830 13:17:57.296610   71283 log.go:80] handling default provider request for package aws-5.42.0
+I0830 13:17:57.296655   71283 log.go:80] ResourceMonitor.RegisterResource received: t=aws:iam/role:Role, name=lambda-role, custom=true, #props=1, parent=urn:pulumi:phil::aws-py-custom-resource::pulumi:pulumi:Stack::aws-py-custom-resource-phil, protect=false, provider=urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86, deps=[], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts=<nil>, providers=map[], replaceOnChanges=[], retainOnDelete=false, deletedWith=
+I0830 13:17:57.296681   71283 log.go:80] handling default provider request for package aws-5.42.0
+I0830 13:17:57.296684   71283 log.go:80] ResourceMonitor.RegisterResource received: t=aws:sns/topic:Topic, name=test-topic, custom=true, #props=0, parent=urn:pulumi:phil::aws-py-custom-resource::pulumi:pulumi:Stack::aws-py-custom-resource-phil, protect=false, provider=urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86, deps=[], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts=<nil>, providers=map[], replaceOnChanges=[], retainOnDelete=false, deletedWith=
+I0830 13:17:57.296687   71283 log.go:80] EvalSourceIterator produced a registration: t=aws:iam/role:Role,name=lambda-role,#props=1
+I0830 13:17:57.296749   71283 log.go:80] ResourceMonitor.RegisterResource received: t=aws:s3/bucket:Bucket, name=test-bucket, custom=true, #props=0, parent=urn:pulumi:phil::aws-py-custom-resource::pulumi:pulumi:Stack::aws-py-custom-resource-phil, protect=false, provider=urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86, deps=[], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts=<nil>, providers=map[], replaceOnChanges=[], retainOnDelete=false, deletedWith=
+I0830 13:17:57.296774   71283 log.go:80] EvalSourceIterator produced a registration: t=aws:sns/topic:Topic,name=test-topic,#props=0
+I0830 13:17:57.296791   71283 log.go:80] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0830 13:17:57.296807   71283 log.go:80] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0830 13:17:57.296858   71283 log.go:80] GetProvider(urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86)
+I0830 13:17:57.296884   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Check(urn:pulumi:phil::aws-py-custom-resource::aws:iam/role:Role::lambda-role) executing (#olds=6,#news=1)
+I0830 13:17:58.745415   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Check(urn:pulumi:phil::aws-py-custom-resource::aws:iam/role:Role::lambda-role) success: inputs=#6 failures=#0
+I0830 13:17:58.745465   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Diff(urn:pulumi:phil::aws-py-custom-resource::aws:iam/role:Role::lambda-role,lambda-role-ae6b16e): executing (#olds=16,#news=6)
+I0830 13:17:58.749041   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Diff(urn:pulumi:phil::aws-py-custom-resource::aws:iam/role:Role::lambda-role,lambda-role-ae6b16e) success: changes=1 #replaces=[] #stables=[namePrefix name path] delbefrepl=false, diffs=#[], detaileddiff=map[]
+I0830 13:17:58.749093   71283 log.go:80] Planner decided not to update 'urn:pulumi:phil::aws-py-custom-resource::aws:iam/role:Role::lambda-role' after diff (same) (inputs=map[__defaults:{[{forceDetachPolicies} {maxSessionDuration} {name} {path}]} assumeRolePolicy:{{"Version": "2012-10-17", "Statement": [{"Action": "sts:AssumeRole", "Principal": {"Service": "lambda.amazonaws.com"}, "Effect": "Allow", "Sid": ""}]}} forceDetachPolicies:{false} maxSessionDuration:{3600} name:{lambda-role-ae6b16e} path:{/}])
+I0830 13:17:58.749113   71283 log.go:80] Checking step same for urn:pulumi:phil::aws-py-custom-resource::aws:iam/role:Role::lambda-role
+I0830 13:17:58.749133   71283 log.go:80] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0830 13:17:58.749144   71283 log.go:80] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0830 13:17:58.749164   71283 log.go:80] GetProvider(urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86)
+I0830 13:17:58.749190   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Check(urn:pulumi:phil::aws-py-custom-resource::aws:sns/topic:Topic::test-topic) executing (#olds=4,#news=0)
+I0830 13:17:58.749210   71283 log.go:80] StepExecutor worker(-2): worker received chain for execution
+I0830 13:17:58.749278   71283 log.go:80] StepExecutor worker(-2): worker waiting for incoming chains
+I0830 13:17:58.749230   71283 log.go:80] EvalSourceIterator produced a registration: t=aws:s3/bucket:Bucket,name=test-bucket,#props=0
+I0830 13:17:58.749292   71283 log.go:80] StepExecutor worker(2): launching oneshot worker
+I0830 13:17:58.749404   71283 log.go:80] StepExecutor worker(2): applying step same on urn:pulumi:phil::aws-py-custom-resource::aws:iam/role:Role::lambda-role (preview false)
+I0830 13:17:58.749508   71283 log.go:80] StepExecutor worker(2): step same on urn:pulumi:phil::aws-py-custom-resource::aws:iam/role:Role::lambda-role retired
+I0830 13:17:58.749544   71283 log.go:80] ResourceMonitor.RegisterResource operation finished: t=aws:iam/role:Role, urn=urn:pulumi:phil::aws-py-custom-resource::aws:iam/role:Role::lambda-role, #outs=16
+I0830 13:17:58.749639   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Check(urn:pulumi:phil::aws-py-custom-resource::aws:sns/topic:Topic::test-topic) success: inputs=#4 failures=#0
+I0830 13:17:58.749673   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Diff(urn:pulumi:phil::aws-py-custom-resource::aws:sns/topic:Topic::test-topic,arn:aws:sns:us-west-2:052848974346:test-topic-8823683): executing (#olds=30,#news=4)
+I0830 13:17:58.750449   71283 log.go:80] resource registration successful: ty=aws:iam/role:Role, urn=urn:pulumi:phil::aws-py-custom-resource::aws:iam/role:Role::lambda-role
+I0830 13:17:58.752527   71283 log.go:80] resource registration prepared: ty=aws:iam/rolePolicyAttachment:RolePolicyAttachment, name=lambda-rpa
+I0830 13:17:58.753877   71283 log.go:80] handling default provider request for package aws-5.42.0
+I0830 13:17:58.753939   71283 log.go:80] ResourceMonitor.RegisterResource received: t=aws:iam/rolePolicyAttachment:RolePolicyAttachment, name=lambda-rpa, custom=true, #props=2, parent=urn:pulumi:phil::aws-py-custom-resource::pulumi:pulumi:Stack::aws-py-custom-resource-phil, protect=false, provider=urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86, deps=[urn:pulumi:phil::aws-py-custom-resource::aws:iam/role:Role::lambda-role], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts=<nil>, providers=map[], replaceOnChanges=[], retainOnDelete=false, deletedWith=
+I0830 13:17:58.756127   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Diff(urn:pulumi:phil::aws-py-custom-resource::aws:sns/topic:Topic::test-topic,arn:aws:sns:us-west-2:052848974346:test-topic-8823683) success: changes=1 #replaces=[] #stables=[fifoTopic name namePrefix] delbefrepl=false, diffs=#[], detaileddiff=map[]
+I0830 13:17:58.756177   71283 log.go:80] Planner decided not to update 'urn:pulumi:phil::aws-py-custom-resource::aws:sns/topic:Topic::test-topic' after diff (same) (inputs=map[__defaults:{[{contentBasedDeduplication} {fifoTopic} {name}]} contentBasedDeduplication:{false} fifoTopic:{false} name:{test-topic-8823683}])
+I0830 13:17:58.756193   71283 log.go:80] Checking step same for urn:pulumi:phil::aws-py-custom-resource::aws:sns/topic:Topic::test-topic
+I0830 13:17:58.756211   71283 log.go:80] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0830 13:17:58.756218   71283 log.go:80] StepExecutor worker(-2): worker received chain for execution
+I0830 13:17:58.756248   71283 log.go:80] StepExecutor worker(-2): worker waiting for incoming chains
+I0830 13:17:58.756222   71283 log.go:80] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0830 13:17:58.756261   71283 log.go:80] StepExecutor worker(3): launching oneshot worker
+I0830 13:17:58.756230   71283 log.go:80] EvalSourceIterator produced a registration: t=aws:iam/rolePolicyAttachment:RolePolicyAttachment,name=lambda-rpa,#props=2
+I0830 13:17:58.756290   71283 log.go:80] GetProvider(urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86)
+I0830 13:17:58.756326   71283 log.go:80] StepExecutor worker(3): applying step same on urn:pulumi:phil::aws-py-custom-resource::aws:sns/topic:Topic::test-topic (preview false)
+I0830 13:17:58.756345   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Check(urn:pulumi:phil::aws-py-custom-resource::aws:s3/bucket:Bucket::test-bucket) executing (#olds=4,#news=0)
+I0830 13:17:58.756422   71283 log.go:80] StepExecutor worker(3): step same on urn:pulumi:phil::aws-py-custom-resource::aws:sns/topic:Topic::test-topic retired
+I0830 13:17:58.756452   71283 log.go:80] ResourceMonitor.RegisterResource operation finished: t=aws:sns/topic:Topic, urn=urn:pulumi:phil::aws-py-custom-resource::aws:sns/topic:Topic::test-topic, #outs=30
+I0830 13:17:58.756744   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Check(urn:pulumi:phil::aws-py-custom-resource::aws:s3/bucket:Bucket::test-bucket) success: inputs=#4 failures=#0
+I0830 13:17:58.756783   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Diff(urn:pulumi:phil::aws-py-custom-resource::aws:s3/bucket:Bucket::test-bucket,test-bucket-08b6e2a): executing (#olds=22,#news=4)
+I0830 13:17:58.757156   71283 log.go:80] resource registration successful: ty=aws:sns/topic:Topic, urn=urn:pulumi:phil::aws-py-custom-resource::aws:sns/topic:Topic::test-topic
+I0830 13:17:58.760031   71283 log.go:80] resource registration prepared: ty=aws:lambda/function:Function, name=test-func
+I0830 13:17:58.761504   71283 log.go:80] handling default provider request for package aws-5.42.0
+I0830 13:17:58.763037   71283 log.go:80] ResourceMonitor.RegisterResource received: t=aws:lambda/function:Function, name=test-func, custom=true, #props=5, parent=urn:pulumi:phil::aws-py-custom-resource::pulumi:pulumi:Stack::aws-py-custom-resource-phil, protect=false, provider=urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86, deps=[urn:pulumi:phil::aws-py-custom-resource::aws:iam/role:Role::lambda-role urn:pulumi:phil::aws-py-custom-resource::aws:sns/topic:Topic::test-topic], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts=<nil>, providers=map[], replaceOnChanges=[], retainOnDelete=false, deletedWith=
+I0830 13:17:58.764365   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Diff(urn:pulumi:phil::aws-py-custom-resource::aws:s3/bucket:Bucket::test-bucket,test-bucket-08b6e2a) success: changes=1 #replaces=[] #stables=[bucket bucketPrefix] delbefrepl=false, diffs=#[], detaileddiff=map[]
+I0830 13:17:58.764407   71283 log.go:80] Planner decided not to update 'urn:pulumi:phil::aws-py-custom-resource::aws:s3/bucket:Bucket::test-bucket' after diff (same) (inputs=map[__defaults:{[{acl} {bucket} {forceDestroy}]} acl:{private} bucket:{test-bucket-08b6e2a} forceDestroy:{false}])
+I0830 13:17:58.764423   71283 log.go:80] Checking step same for urn:pulumi:phil::aws-py-custom-resource::aws:s3/bucket:Bucket::test-bucket
+I0830 13:17:58.764446   71283 log.go:80] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0830 13:17:58.764457   71283 log.go:80] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0830 13:17:58.764482   71283 log.go:80] GetProvider(urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86)
+I0830 13:17:58.764487   71283 log.go:80] StepExecutor worker(-2): worker received chain for execution
+I0830 13:17:58.764514   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Check(urn:pulumi:phil::aws-py-custom-resource::aws:iam/rolePolicyAttachment:RolePolicyAttachment::lambda-rpa) executing (#olds=3,#news=2)
+I0830 13:17:58.764523   71283 log.go:80] StepExecutor worker(-2): worker waiting for incoming chains
+I0830 13:17:58.764539   71283 log.go:80] StepExecutor worker(4): launching oneshot worker
+I0830 13:17:58.764511   71283 log.go:80] EvalSourceIterator produced a registration: t=aws:lambda/function:Function,name=test-func,#props=5
+I0830 13:17:58.764620   71283 log.go:80] StepExecutor worker(4): applying step same on urn:pulumi:phil::aws-py-custom-resource::aws:s3/bucket:Bucket::test-bucket (preview false)
+I0830 13:17:58.764734   71283 log.go:80] StepExecutor worker(4): step same on urn:pulumi:phil::aws-py-custom-resource::aws:s3/bucket:Bucket::test-bucket retired
+I0830 13:17:58.764761   71283 log.go:80] ResourceMonitor.RegisterResource operation finished: t=aws:s3/bucket:Bucket, urn=urn:pulumi:phil::aws-py-custom-resource::aws:s3/bucket:Bucket::test-bucket, #outs=22
+I0830 13:17:58.764928   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Check(urn:pulumi:phil::aws-py-custom-resource::aws:iam/rolePolicyAttachment:RolePolicyAttachment::lambda-rpa) success: inputs=#3 failures=#0
+I0830 13:17:58.764974   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Diff(urn:pulumi:phil::aws-py-custom-resource::aws:iam/rolePolicyAttachment:RolePolicyAttachment::lambda-rpa,lambda-role-ae6b16e-20230830201317499700000001): executing (#olds=3,#news=3)
+I0830 13:17:58.765719   71283 log.go:80] resource registration successful: ty=aws:s3/bucket:Bucket, urn=urn:pulumi:phil::aws-py-custom-resource::aws:s3/bucket:Bucket::test-bucket
+I0830 13:17:58.765747   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Diff(urn:pulumi:phil::aws-py-custom-resource::aws:iam/rolePolicyAttachment:RolePolicyAttachment::lambda-rpa,lambda-role-ae6b16e-20230830201317499700000001) success: changes=1 #replaces=[] #stables=[role policyArn] delbefrepl=false, diffs=#[], detaileddiff=map[]
+I0830 13:17:58.765793   71283 log.go:80] Planner decided not to update 'urn:pulumi:phil::aws-py-custom-resource::aws:iam/rolePolicyAttachment:RolePolicyAttachment::lambda-rpa' after diff (same) (inputs=map[__defaults:{[]} policyArn:{arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole} role:{lambda-role-ae6b16e}])
+I0830 13:17:58.765809   71283 log.go:80] Checking step same for urn:pulumi:phil::aws-py-custom-resource::aws:iam/rolePolicyAttachment:RolePolicyAttachment::lambda-rpa
+I0830 13:17:58.765846   71283 log.go:80] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0830 13:17:58.765849   71283 log.go:80] StepExecutor worker(-2): worker received chain for execution
+I0830 13:17:58.765875   71283 log.go:80] StepExecutor worker(-2): worker waiting for incoming chains
+I0830 13:17:58.765859   71283 log.go:80] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0830 13:17:58.765889   71283 log.go:80] StepExecutor worker(5): launching oneshot worker
+I0830 13:17:58.765933   71283 log.go:80] GetProvider(urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86)
+I0830 13:17:58.766006   71283 log.go:80] StepExecutor worker(5): applying step same on urn:pulumi:phil::aws-py-custom-resource::aws:iam/rolePolicyAttachment:RolePolicyAttachment::lambda-rpa (preview false)
+I0830 13:17:58.766029   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Check(urn:pulumi:phil::aws-py-custom-resource::aws:lambda/function:Function::test-func) executing (#olds=13,#news=5)
+I0830 13:17:58.766090   71283 log.go:80] StepExecutor worker(5): step same on urn:pulumi:phil::aws-py-custom-resource::aws:iam/rolePolicyAttachment:RolePolicyAttachment::lambda-rpa retired
+I0830 13:17:58.766123   71283 log.go:80] ResourceMonitor.RegisterResource operation finished: t=aws:iam/rolePolicyAttachment:RolePolicyAttachment, urn=urn:pulumi:phil::aws-py-custom-resource::aws:iam/rolePolicyAttachment:RolePolicyAttachment::lambda-rpa, #outs=3
+I0830 13:17:58.767346   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Check(urn:pulumi:phil::aws-py-custom-resource::aws:lambda/function:Function::test-func) success: inputs=#13 failures=#0
+I0830 13:17:58.767390   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Diff(urn:pulumi:phil::aws-py-custom-resource::aws:lambda/function:Function::test-func,test-func-50fd6c5): executing (#olds=39,#news=13)
+I0830 13:17:58.768779   71283 log.go:80] resource registration successful: ty=aws:iam/rolePolicyAttachment:RolePolicyAttachment, urn=urn:pulumi:phil::aws-py-custom-resource::aws:iam/rolePolicyAttachment:RolePolicyAttachment::lambda-rpa
+I0830 13:17:58.771491   71283 log.go:80] resource registration prepared: ty=aws:iam/policy:Policy, name=bucket-policy
+I0830 13:17:58.772857   71283 log.go:80] handling default provider request for package aws-5.42.0
+I0830 13:17:58.772919   71283 log.go:80] ResourceMonitor.RegisterResource received: t=aws:iam/policy:Policy, name=bucket-policy, custom=true, #props=1, parent=urn:pulumi:phil::aws-py-custom-resource::pulumi:pulumi:Stack::aws-py-custom-resource-phil, protect=false, provider=urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86, deps=[urn:pulumi:phil::aws-py-custom-resource::aws:s3/bucket:Bucket::test-bucket], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts=<nil>, providers=map[], replaceOnChanges=[], retainOnDelete=false, deletedWith=
+I0830 13:17:58.772950   71283 log.go:80] EvalSourceIterator produced a registration: t=aws:iam/policy:Policy,name=bucket-policy,#props=1
+I0830 13:17:58.776729   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Diff(urn:pulumi:phil::aws-py-custom-resource::aws:lambda/function:Function::test-func,test-func-50fd6c5) success: changes=1 #replaces=[] #stables=[name packageType] delbefrepl=false, diffs=#[], detaileddiff=map[]
+I0830 13:17:58.776816   71283 log.go:80] Planner decided not to update 'urn:pulumi:phil::aws-py-custom-resource::aws:lambda/function:Function::test-func' after diff (same) (inputs=map[__defaults:{[{memorySize} {name} {packageType} {publish} {reservedConcurrentExecutions} {skipDestroy} {timeout}]} code:{&{ c396b0f8871b115b110680bf0a15de2365abb400af42ef591b918c17d45e5d90 map[.:0xc0007259f0]  }} environment:{map[__defaults:{[]} variables:{map[TOPIC_ARN:{arn:aws:sns:us-west-2:052848974346:test-topic-8823683} __defaults:{[]}]}]} handler:{index.handler} memorySize:{128} name:{test-func-50fd6c5} packageType:{Zip} publish:{false} reservedConcurrentExecutions:{-1} role:{arn:aws:iam::052848974346:role/lambda-role-ae6b16e} runtime:{nodejs16.x} skipDestroy:{false} timeout:{3}])
+I0830 13:17:58.776858   71283 log.go:80] Checking step same for urn:pulumi:phil::aws-py-custom-resource::aws:lambda/function:Function::test-func
+I0830 13:17:58.776877   71283 log.go:80] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0830 13:17:58.776888   71283 log.go:80] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0830 13:17:58.776899   71283 log.go:80] StepExecutor worker(-2): worker received chain for execution
+I0830 13:17:58.776930   71283 log.go:80] StepExecutor worker(-2): worker waiting for incoming chains
+I0830 13:17:58.776910   71283 log.go:80] GetProvider(urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86)
+I0830 13:17:58.776944   71283 log.go:80] StepExecutor worker(6): launching oneshot worker
+I0830 13:17:58.777001   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Check(urn:pulumi:phil::aws-py-custom-resource::aws:iam/policy:Policy::bucket-policy) executing (#olds=4,#news=1)
+I0830 13:17:58.777069   71283 log.go:80] StepExecutor worker(6): applying step same on urn:pulumi:phil::aws-py-custom-resource::aws:lambda/function:Function::test-func (preview false)
+I0830 13:17:58.777233   71283 log.go:80] StepExecutor worker(6): step same on urn:pulumi:phil::aws-py-custom-resource::aws:lambda/function:Function::test-func retired
+I0830 13:17:58.777255   71283 log.go:80] ResourceMonitor.RegisterResource operation finished: t=aws:lambda/function:Function, urn=urn:pulumi:phil::aws-py-custom-resource::aws:lambda/function:Function::test-func, #outs=39
+I0830 13:17:58.777527   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Check(urn:pulumi:phil::aws-py-custom-resource::aws:iam/policy:Policy::bucket-policy) success: inputs=#4 failures=#0
+I0830 13:17:58.777566   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Diff(urn:pulumi:phil::aws-py-custom-resource::aws:iam/policy:Policy::bucket-policy,arn:aws:iam::052848974346:policy/bucket-policy-c8069b0): executing (#olds=10,#news=4)
+I0830 13:17:58.778085   71283 log.go:80] resource registration successful: ty=aws:lambda/function:Function, urn=urn:pulumi:phil::aws-py-custom-resource::aws:lambda/function:Function::test-func
+I0830 13:17:58.779134   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Diff(urn:pulumi:phil::aws-py-custom-resource::aws:iam/policy:Policy::bucket-policy,arn:aws:iam::052848974346:policy/bucket-policy-c8069b0) success: changes=1 #replaces=[] #stables=[name namePrefix path description] delbefrepl=false, diffs=#[], detaileddiff=map[]
+I0830 13:17:58.779178   71283 log.go:80] Planner decided not to update 'urn:pulumi:phil::aws-py-custom-resource::aws:iam/policy:Policy::bucket-policy' after diff (same) (inputs=map[__defaults:{[{name} {path}]} name:{bucket-policy-c8069b0} path:{/} policy:{{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": "s3:PutObject", "Resource": "arn:aws:s3:::test-bucket-08b6e2a/*"}]}}])
+I0830 13:17:58.779194   71283 log.go:80] Checking step same for urn:pulumi:phil::aws-py-custom-resource::aws:iam/policy:Policy::bucket-policy
+I0830 13:17:58.779213   71283 log.go:80] StepExecutor worker(-2): worker received chain for execution
+I0830 13:17:58.779226   71283 log.go:80] StepExecutor worker(-2): worker waiting for incoming chains
+I0830 13:17:58.779236   71283 log.go:80] StepExecutor worker(7): launching oneshot worker
+I0830 13:17:58.779286   71283 log.go:80] StepExecutor worker(7): applying step same on urn:pulumi:phil::aws-py-custom-resource::aws:iam/policy:Policy::bucket-policy (preview false)
+I0830 13:17:58.779354   71283 log.go:80] StepExecutor worker(7): step same on urn:pulumi:phil::aws-py-custom-resource::aws:iam/policy:Policy::bucket-policy retired
+I0830 13:17:58.779384   71283 log.go:80] ResourceMonitor.RegisterResource operation finished: t=aws:iam/policy:Policy, urn=urn:pulumi:phil::aws-py-custom-resource::aws:iam/policy:Policy::bucket-policy, #outs=10
+I0830 13:17:58.781371   71283 log.go:80] resource registration successful: ty=aws:iam/policy:Policy, urn=urn:pulumi:phil::aws-py-custom-resource::aws:iam/policy:Policy::bucket-policy
+I0830 13:17:58.783768   71283 log.go:80] resource registration prepared: ty=aws:lambda/permission:Permission, name=lambda-perm
+I0830 13:17:58.784470   71283 log.go:80] resource registration prepared: ty=aws:sns/topicSubscription:TopicSubscription, name=topic-sub
+I0830 13:17:58.785671   71283 log.go:80] resource registration prepared: ty=aws:iam/rolePolicyAttachment:RolePolicyAttachment, name=lambda-bucket-rpa
+I0830 13:17:58.787268   71283 log.go:80] handling default provider request for package aws-5.42.0
+I0830 13:17:58.787321   71283 log.go:80] ResourceMonitor.RegisterResource received: t=aws:lambda/permission:Permission, name=lambda-perm, custom=true, #props=4, parent=urn:pulumi:phil::aws-py-custom-resource::pulumi:pulumi:Stack::aws-py-custom-resource-phil, protect=false, provider=urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86, deps=[urn:pulumi:phil::aws-py-custom-resource::aws:sns/topic:Topic::test-topic urn:pulumi:phil::aws-py-custom-resource::aws:lambda/function:Function::test-func], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts=<nil>, providers=map[], replaceOnChanges=[], retainOnDelete=false, deletedWith=
+I0830 13:17:58.787352   71283 log.go:80] EvalSourceIterator produced a registration: t=aws:lambda/permission:Permission,name=lambda-perm,#props=4
+I0830 13:17:58.787371   71283 log.go:80] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0830 13:17:58.787382   71283 log.go:80] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0830 13:17:58.787398   71283 log.go:80] handling default provider request for package aws-5.42.0
+I0830 13:17:58.787423   71283 log.go:80] GetProvider(urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86)
+I0830 13:17:58.787454   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Check(urn:pulumi:phil::aws-py-custom-resource::aws:lambda/permission:Permission::lambda-perm) executing (#olds=6,#news=4)
+I0830 13:17:58.787463   71283 log.go:80] ResourceMonitor.RegisterResource received: t=aws:sns/topicSubscription:TopicSubscription, name=topic-sub, custom=true, #props=3, parent=urn:pulumi:phil::aws-py-custom-resource::pulumi:pulumi:Stack::aws-py-custom-resource-phil, protect=false, provider=urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86, deps=[urn:pulumi:phil::aws-py-custom-resource::aws:sns/topic:Topic::test-topic urn:pulumi:phil::aws-py-custom-resource::aws:lambda/function:Function::test-func], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts=<nil>, providers=map[], replaceOnChanges=[], retainOnDelete=false, deletedWith=
+I0830 13:17:58.787494   71283 log.go:80] EvalSourceIterator produced a registration: t=aws:sns/topicSubscription:TopicSubscription,name=topic-sub,#props=3
+I0830 13:17:58.787587   71283 log.go:80] handling default provider request for package aws-5.42.0
+I0830 13:17:58.787647   71283 log.go:80] ResourceMonitor.RegisterResource received: t=aws:iam/rolePolicyAttachment:RolePolicyAttachment, name=lambda-bucket-rpa, custom=true, #props=2, parent=urn:pulumi:phil::aws-py-custom-resource::pulumi:pulumi:Stack::aws-py-custom-resource-phil, protect=false, provider=urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86, deps=[urn:pulumi:phil::aws-py-custom-resource::aws:iam/role:Role::lambda-role urn:pulumi:phil::aws-py-custom-resource::aws:iam/policy:Policy::bucket-policy], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts=<nil>, providers=map[], replaceOnChanges=[], retainOnDelete=false, deletedWith=
+I0830 13:17:58.787996   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Check(urn:pulumi:phil::aws-py-custom-resource::aws:lambda/permission:Permission::lambda-perm) success: inputs=#6 failures=#0
+I0830 13:17:58.788026   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Diff(urn:pulumi:phil::aws-py-custom-resource::aws:lambda/permission:Permission::lambda-perm,lambda-perm-259ed42): executing (#olds=8,#news=6)
+I0830 13:17:58.789193   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Diff(urn:pulumi:phil::aws-py-custom-resource::aws:lambda/permission:Permission::lambda-perm,lambda-perm-259ed42) success: changes=1 #replaces=[] #stables=[action function functionUrlAuthType principal principalOrgId sourceAccount sourceArn eventSourceToken qualifier statementId statementIdPrefix] delbefrepl=false, diffs=#[], detaileddiff=map[]
+I0830 13:17:58.789234   71283 log.go:80] Planner decided not to update 'urn:pulumi:phil::aws-py-custom-resource::aws:lambda/permission:Permission::lambda-perm' after diff (same) (inputs=map[__defaults:{[{statementId}]} action:{lambda:InvokeFunction} function:{test-func-50fd6c5} principal:{sns.amazonaws.com} sourceArn:{arn:aws:sns:us-west-2:052848974346:test-topic-8823683} statementId:{lambda-perm-259ed42}])
+I0830 13:17:58.789252   71283 log.go:80] Checking step same for urn:pulumi:phil::aws-py-custom-resource::aws:lambda/permission:Permission::lambda-perm
+I0830 13:17:58.789269   71283 log.go:80] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0830 13:17:58.789279   71283 log.go:80] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0830 13:17:58.789301   71283 log.go:80] GetProvider(urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86)
+I0830 13:17:58.789300   71283 log.go:80] StepExecutor worker(-2): worker received chain for execution
+I0830 13:17:58.789315   71283 log.go:80] EvalSourceIterator produced a registration: t=aws:iam/rolePolicyAttachment:RolePolicyAttachment,name=lambda-bucket-rpa,#props=2
+I0830 13:17:58.789345   71283 log.go:80] StepExecutor worker(8): launching oneshot worker
+I0830 13:17:58.789333   71283 log.go:80] StepExecutor worker(-2): worker waiting for incoming chains
+I0830 13:17:58.789341   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Check(urn:pulumi:phil::aws-py-custom-resource::aws:sns/topicSubscription:TopicSubscription::topic-sub) executing (#olds=7,#news=3)
+I0830 13:17:58.789410   71283 log.go:80] StepExecutor worker(8): applying step same on urn:pulumi:phil::aws-py-custom-resource::aws:lambda/permission:Permission::lambda-perm (preview false)
+I0830 13:17:58.789536   71283 log.go:80] StepExecutor worker(8): step same on urn:pulumi:phil::aws-py-custom-resource::aws:lambda/permission:Permission::lambda-perm retired
+I0830 13:17:58.789570   71283 log.go:80] ResourceMonitor.RegisterResource operation finished: t=aws:lambda/permission:Permission, urn=urn:pulumi:phil::aws-py-custom-resource::aws:lambda/permission:Permission::lambda-perm, #outs=8
+I0830 13:17:58.789931   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Check(urn:pulumi:phil::aws-py-custom-resource::aws:sns/topicSubscription:TopicSubscription::topic-sub) success: inputs=#7 failures=#0
+I0830 13:17:58.789968   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Diff(urn:pulumi:phil::aws-py-custom-resource::aws:sns/topicSubscription:TopicSubscription::topic-sub,arn:aws:sns:us-west-2:052848974346:test-topic-8823683:f715ff1f-222b-43a3-bc06-f17725eb52ef): executing (#olds=16,#news=7)
+I0830 13:17:58.790319   71283 log.go:80] resource registration successful: ty=aws:lambda/permission:Permission, urn=urn:pulumi:phil::aws-py-custom-resource::aws:lambda/permission:Permission::lambda-perm
+I0830 13:17:58.792786   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Diff(urn:pulumi:phil::aws-py-custom-resource::aws:sns/topicSubscription:TopicSubscription::topic-sub,arn:aws:sns:us-west-2:052848974346:test-topic-8823683:f715ff1f-222b-43a3-bc06-f17725eb52ef) success: changes=1 #replaces=[] #stables=[protocol endpoint topic] delbefrepl=false, diffs=#[], detaileddiff=map[]
+I0830 13:17:58.792864   71283 log.go:80] Planner decided not to update 'urn:pulumi:phil::aws-py-custom-resource::aws:sns/topicSubscription:TopicSubscription::topic-sub' after diff (same) (inputs=map[__defaults:{[{confirmationTimeoutInMinutes} {endpointAutoConfirms} {rawMessageDelivery}]} confirmationTimeoutInMinutes:{1} endpoint:{arn:aws:lambda:us-west-2:052848974346:function:test-func-50fd6c5} endpointAutoConfirms:{false} protocol:{lambda} rawMessageDelivery:{false} topic:{arn:aws:sns:us-west-2:052848974346:test-topic-8823683}])
+I0830 13:17:58.792907   71283 log.go:80] Checking step same for urn:pulumi:phil::aws-py-custom-resource::aws:sns/topicSubscription:TopicSubscription::topic-sub
+I0830 13:17:58.792929   71283 log.go:80] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0830 13:17:58.792942   71283 log.go:80] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0830 13:17:58.792946   71283 log.go:80] StepExecutor worker(-2): worker received chain for execution
+I0830 13:17:58.792967   71283 log.go:80] GetProvider(urn:pulumi:phil::aws-py-custom-resource::pulumi:providers:aws::default_5_42_0::d93f39f6-dd39-4714-82fa-09b5a7827f86)
+I0830 13:17:58.792984   71283 log.go:80] StepExecutor worker(-2): worker waiting for incoming chains
+I0830 13:17:58.792997   71283 log.go:80] StepExecutor worker(9): launching oneshot worker
+I0830 13:17:58.793019   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Check(urn:pulumi:phil::aws-py-custom-resource::aws:iam/rolePolicyAttachment:RolePolicyAttachment::lambda-bucket-rpa) executing (#olds=3,#news=2)
+I0830 13:17:58.793088   71283 log.go:80] StepExecutor worker(9): applying step same on urn:pulumi:phil::aws-py-custom-resource::aws:sns/topicSubscription:TopicSubscription::topic-sub (preview false)
+I0830 13:17:58.793192   71283 log.go:80] StepExecutor worker(9): step same on urn:pulumi:phil::aws-py-custom-resource::aws:sns/topicSubscription:TopicSubscription::topic-sub retired
+I0830 13:17:58.793223   71283 log.go:80] ResourceMonitor.RegisterResource operation finished: t=aws:sns/topicSubscription:TopicSubscription, urn=urn:pulumi:phil::aws-py-custom-resource::aws:sns/topicSubscription:TopicSubscription::topic-sub, #outs=16
+I0830 13:17:58.793701   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Check(urn:pulumi:phil::aws-py-custom-resource::aws:iam/rolePolicyAttachment:RolePolicyAttachment::lambda-bucket-rpa) success: inputs=#3 failures=#0
+I0830 13:17:58.793743   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Diff(urn:pulumi:phil::aws-py-custom-resource::aws:iam/rolePolicyAttachment:RolePolicyAttachment::lambda-bucket-rpa,lambda-role-ae6b16e-20230830201318984900000002): executing (#olds=3,#news=3)
+I0830 13:17:58.794184   71283 log.go:80] resource registration successful: ty=aws:sns/topicSubscription:TopicSubscription, urn=urn:pulumi:phil::aws-py-custom-resource::aws:sns/topicSubscription:TopicSubscription::topic-sub
+I0830 13:17:58.794468   71283 log.go:80] Provider[aws, 0xc0011ef5e0].Diff(urn:pulumi:phil::aws-py-custom-resource::aws:iam/rolePolicyAttachment:RolePolicyAttachment::lambda-bucket-rpa,lambda-role-ae6b16e-20230830201318984900000002) success: changes=1 #replaces=[] #stables=[role policyArn] delbefrepl=false, diffs=#[], detaileddiff=map[]
+I0830 13:17:58.794507   71283 log.go:80] Planner decided not to update 'urn:pulumi:phil::aws-py-custom-resource::aws:iam/rolePolicyAttachment:RolePolicyAttachment::lambda-bucket-rpa' after diff (same) (inputs=map[__defaults:{[]} policyArn:{arn:aws:iam::052848974346:policy/bucket-policy-c8069b0} role:{lambda-role-ae6b16e}])
+I0830 13:17:58.794523   71283 log.go:80] Checking step same for urn:pulumi:phil::aws-py-custom-resource::aws:iam/rolePolicyAttachment:RolePolicyAttachment::lambda-bucket-rpa
+I0830 13:17:58.794543   71283 log.go:80] StepExecutor worker(-2): worker received chain for execution
+I0830 13:17:58.794555   71283 log.go:80] StepExecutor worker(-2): worker waiting for incoming chains
+I0830 13:17:58.794565   71283 log.go:80] StepExecutor worker(10): launching oneshot worker
+I0830 13:17:58.794628   71283 log.go:80] StepExecutor worker(10): applying step same on urn:pulumi:phil::aws-py-custom-resource::aws:iam/rolePolicyAttachment:RolePolicyAttachment::lambda-bucket-rpa (preview false)
+I0830 13:17:58.794690   71283 log.go:80] StepExecutor worker(10): step same on urn:pulumi:phil::aws-py-custom-resource::aws:iam/rolePolicyAttachment:RolePolicyAttachment::lambda-bucket-rpa retired
+I0830 13:17:58.794742   71283 log.go:80] ResourceMonitor.RegisterResource operation finished: t=aws:iam/rolePolicyAttachment:RolePolicyAttachment, urn=urn:pulumi:phil::aws-py-custom-resource::aws:iam/rolePolicyAttachment:RolePolicyAttachment::lambda-bucket-rpa, #outs=3
+I0830 13:17:58.795482   71283 log.go:80] resource registration successful: ty=aws:iam/rolePolicyAttachment:RolePolicyAttachment, urn=urn:pulumi:phil::aws-py-custom-resource::aws:iam/rolePolicyAttachment:RolePolicyAttachment::lambda-bucket-rpa
+I0830 13:18:06.290752   71283 log.go:80] deploymentExecutor.Execute(...): context finished: context canceled
+I0830 13:18:06.290808   71283 log.go:80] StepExecutor worker(-1): StepExecutor.waitForCompletion(): waiting for worker threads to exit
+I0830 13:18:06.290757   71283 log.go:80] deploymentExecutor.Execute(...): signalling cancellation to providers...
+I0830 13:18:06.290779   71283 log.go:80] StepExecutor worker(-2): worker exiting due to cancellation
+I0830 13:18:06.290925   71283 log.go:80] StepExecutor worker(-1): StepExecutor.waitForCompletion(): worker threads all exited
+I0830 13:18:06.290946   71283 log.go:80] deploymentExecutor.Execute(...): step executor has completed
+I0830 13:18:06.291055   71283 log.go:80] eventSink::Error(<{%reset%}>update canceled<{%reset%}>)
+I0830 13:18:06.291340   71283 log.go:80] deploymentExecutor.Execute(...): failed to signal cancellation to providers: 1 error occurred:
+	* Error signaling cancellation to resource provider 'aws': rpc error: code = Canceled desc = grpc: the client connection is closing
+
+I0830 13:18:06.305115   71283 log.go:80] langhost[python].Run(pwd=/Users/pedwards/repos/customer/fauna/aws-py-custom-resource,program=.,...,dryrun=false) failed: err=error reading from server: read tcp 127.0.0.1:61604->127.0.0.1:61602: use of closed network connection
+I0830 13:18:06.305170   71283 log.go:80] Explicitly ignoring and discarding error: rpc error: code = Canceled desc = grpc: the client connection is closing
+I0830 13:18:06.309061   71283 log.go:80] Explicitly ignoring and discarding error: 1 error occurred:
+	* operation not permitted
+
+I0830 13:18:06.309101   71283 log.go:80] EvalSourceIterator ended with an error: error reading from server: read tcp 127.0.0.1:61604->127.0.0.1:61602: use of closed network connection
+I0830 13:18:06.309117   71283 log.go:80] deploymentExecutor.Execute(...): incoming events goroutine exiting
+I0830 13:18:06.310171   71283 log.go:80] *** Update(preview=false) complete ***

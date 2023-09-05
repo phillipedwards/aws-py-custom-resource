@@ -3,6 +3,7 @@
 import json
 import pulumi
 from pulumi_aws import sns, iam, sns, lambda_, s3, cloudformation
+import pulumi_random
 import cloud_formation
 
 
@@ -110,6 +111,10 @@ sns.TopicSubscription(
 #         topic_arn=topic.arn, bucket_role_arn=lambda_role.arn, bucket_role=lambda_role
 #     ),
 # )
+rand = pulumi_random.RandomId(
+    "random",
+    byte_length=6,
+)
 
 cloudformation.Stack(
     "test-stack",
@@ -117,7 +122,7 @@ cloudformation.Stack(
         ignore_changes="templateBody",
         depends_on=[lambda_role],
     ),
-    name="CustomResourceTestStack",
+    name=pulumi.Output.concat("CustomResourceTestStack", rand.id),
     template_body=template_body(
         some_str="random",
         role_arn=lambda_role.arn,

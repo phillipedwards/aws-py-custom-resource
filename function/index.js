@@ -1,7 +1,7 @@
 const AWS = require("aws-sdk");
 const client = new AWS.S3();
 exports.handler = async (event) => {
-    console.log(event);
+    console.log(JSON.stringify(event));
 
     try {
     } catch (error) {
